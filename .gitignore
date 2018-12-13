@@ -482,3 +482,5 @@ Temporary Items
 .idea
 *.py
 wikipedia
+/wikipedia
+./wikipedia
