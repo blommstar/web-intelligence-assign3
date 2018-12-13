@@ -1,3 +1,4 @@
+
 export default class Searcher {
   constructor(query) {
     this.query
