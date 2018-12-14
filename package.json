@@ -1,7 +1,6 @@
 {
   "name": "assignment3",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -18,10 +17,12 @@
   },
   "homepage": "https://github.com/blommstar/web-intelligence-assign3#readme",
   "devDependencies": {
+    "express": "^4.16.4",
     "nodemon": "^1.18.8"
   },
   "dependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0"
-  }
+  },
+  "description": ""
 }

@@ -1,8 +1,8 @@
-
-export default class Searcher {
-  constructor(query) {
+class Searcher {
+  constructor(query, data) {
     this.query
     this.searchResults = []
+    this.data = data
   }
 
   runQuery(queryString) {
@@ -13,7 +13,6 @@ export default class Searcher {
       scores.frequncyScore[page] = getFrequncyScore(page, queryString)
       scores.locationScore[page] = getLocationScore(page, queryString)
     }
-
     normalize(scores.frequncyScore)
     normalize(scores.locationScore)
 
@@ -26,5 +25,22 @@ export default class Searcher {
     return this
   }
 
+  getFequencyScore(word, pageObj) {
+    // hash = {}
+    // let words = query.split(' ')
+    // words.forEach(function (i) { hash[i] = (hash[i] || 0) + 1; });
+    // for (word of words) {
+    //   hash[word] = this.words.filter((value) => {
+    //     return value.toLowerCase() == word.toLowerCase()
+    //   }).length
+    // }
+    // return hash
+    return pageObj.words.filter((value) => {
+      return value.toLowerCase() == word.toLowerCase()
+    }).length
+  }
+
 
 }
+
+module.exports = Searcher

@@ -1,4 +1,4 @@
-export class Pages {
+class Pages {
   constructor() {
     this.pages = []
   }
@@ -8,6 +8,6 @@ export class Pages {
       this.pages.push(new Page())
     }
   }
-
-
 }
+
+module.exports = Pages
